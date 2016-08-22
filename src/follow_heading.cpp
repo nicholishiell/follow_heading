@@ -44,7 +44,7 @@ int main(int argc, char **argv){
   ros::Subscriber targetHeadingSub  = n.subscribe("targetHeading", 1000, TargetHeadingCallback);
   ros::Subscriber targetLinearVelSub = n.subscribe("targetLinearVelocity", 1000, TargetLinearVelCallback);
   
-  ros::Rate loop_rate(5);
+  ros::Rate loop_rate(25);
 
   bool keepGoing = true;
   
@@ -73,6 +73,7 @@ int main(int argc, char **argv){
 	headingError = 0;
 	v = 0.1*targetLinearVel;
       }
+
       // Now convert to radians (per second)
       headingError = headingError * M_PI/180.;
     
