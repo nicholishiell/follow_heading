@@ -78,7 +78,7 @@ int main(int argc, char **argv){
       headingError = headingError * M_PI/180.;
     
       w = headingError;
-      //v = 0.01*targetLinearVel;
+      v = 0.01*targetLinearVel;
     }
         
     msg.linear.x = v;
